@@ -1,3 +1,4 @@
+
 p=[0]*1000
 lis=[]
 #sieve function
@@ -25,6 +26,10 @@ def coprime(n):
     if n>1 :
         ans-=ans/n
     return ans
+
+'''
+lsdfkksdf
+'''
 sieve()
 n=int(input("Enter find coprime number: "))
 ans=coprime(n)
