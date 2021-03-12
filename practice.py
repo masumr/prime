@@ -27,7 +27,10 @@ def coprime(n):
         ans-=ans/n
     return ans
 
+
 #add local main function
+#main feauters
+
 sieve()
 n=int(input("Enter find coprime number: "))
 ans=coprime(n)
