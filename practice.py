@@ -26,6 +26,8 @@ def coprime(n):
     if n>1 :
         ans-=ans/n
     return ans
+
+#add local main function
 sieve()
 n=int(input("Enter find coprime number: "))
 ans=coprime(n)
