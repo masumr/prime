@@ -1,0 +1,7 @@
+from apis_admin.serializers.serializer_trending_beat import TrendingBeatSerializer
+from apis_admin.viewsets.admin_dynamic_model_viewset import AdminDynamicModelViewset
+from apis_client.mixins.mixin_trending_beat import MixinTrendingBeatViewset
+
+
+class TrendingBeatViewsetViewSet(AdminDynamicModelViewset, MixinTrendingBeatViewset):
+    serializer_class = TrendingBeatSerializer

@@ -1,0 +1,7 @@
+from apis_client.mixins.mixin_trending_beat import MixinTrendingBeatViewset
+from apis_client.serializers.serializer_trending_beat import TrendingBeatSerializer
+from apis_client.viewsets.read_only_dynamic_model_viewset import ReadOnlyDynamicModelViewset
+
+
+class TrendingBeatViewsetViewSet(ReadOnlyDynamicModelViewset, MixinTrendingBeatViewset):
+    serializer_class = TrendingBeatSerializer

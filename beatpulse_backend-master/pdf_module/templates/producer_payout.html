@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Payout Invoice</title>
+</head>
+
+<body>
+    <h1>Payout Invoice</h1>
+    <h2>Payed by</h2>
+    <p>
+        Invoice #: {{ payout.id }}
+    </p>
+    <p>Beatpulse Ltd<br>2nd Floor<br>
+        St John Street, Aberdeenshire 2541<br>
+        United Kingdom<br>
+        Phone: 031-432-678<br>
+        Email: payment@beatpulse.app</p>
+    <h2>Payed to</h2>
+    <p>Producer: {{ payout.producer.display_name }}</p>
+    <p>Date: {{ payout.date |  date:"d F Y" }}</p>
+    <p>Total: ${{ payout.payed_amount |floatformat:"2" }}</p>
+    <h2>Details</h2>
+    <table>
+        <tr>
+            <td><b>Description</b></td>
+            <td><b>Amount</b></td>
+        </tr>
+        {% for field in payout.description_fields.all %}
+        <tr>
+            <td>{{ field.description }}</td>
+            <td>${{ field.amount }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

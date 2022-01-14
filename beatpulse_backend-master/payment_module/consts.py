@@ -1,0 +1,18 @@
+from settings.settings_base import STAGING
+
+if STAGING:
+    STRIPE_PUBLIC_KEY = "pk_test_Jkr4dUOF3PVBHadRG49Kwp2Y"
+    STRIPE_SECRET_KEY = "sk_test_28pxiJwesqX2bzSi8L8GFBqS"
+    STRIPE_WEBHOOK_SECRET = "whsec_IeiNETkZCrREEZKptEiTCZLseGiUJZSE"
+
+    PAYPAL_ENVIROMENT = "sandbox"
+    PAYPAL_CLIENT_ID = "AW-I9jDy5O33lTICU68fM0oq30JZMn3XNTL_I_Et8xn41-UeSf4__3KhT2MgzT6DB-j44ZiObjrRLryz"
+    PAYPAL_SECRET = "ELa7kc76-j912XburkLdB5gj3AkMaFrp4fVeChZzED-GP6sigbNHQxGn2ZGwXxaY5vWZXehGzEhrGhXy"
+else:
+    STRIPE_PUBLIC_KEY = "pk_live_0mK7a8BPnvhRnh85hAreLypM"
+    STRIPE_SECRET_KEY = "sk_live_sy494mhA21LYr08zSxWcF6Qj"
+    STRIPE_WEBHOOK_SECRET = "whsec_cUkZsTTnO9gK3kq2PIjqWwfql3xxOxqi"
+    
+    PAYPAL_ENVIROMENT = "live"
+    PAYPAL_CLIENT_ID = "ASo8aXZqFwwVNXK1rFCOSqjgWuor4mLhMQ-St1mM2RfYNWBxHojpExrYmhlyV6Or6XfO-Ic34bnvW5YK"
+    PAYPAL_SECRET = "ED0Sg7nxe6trNZlWL7BzdNZVv9VMngm-A7rEe5oPEGyJ7pc5xA4f3gdT22NpsbPwKFXZJ6cHDBpaCo3J"
